@@ -1,0 +1,16 @@
+.navbar-item {
+    padding-right: 35px;
+    &:hover {
+        .navbar-link {
+            color: var(--primary-hover);
+        }
+    }
+    &:last-child {
+        padding-right: 0;
+    }
+}
+
+.btn {
+    width: 150px;
+    height: 48px;
+}
