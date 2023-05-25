@@ -3,21 +3,33 @@ import { Link } from 'react-router-dom';
 import DefaultPopper from '../DefaultPopper';
 
 const aboutList = [
-    { to: '/', src: 'https://mcdonalds.vn/uploads/userfiles/images/news_1536502569/lich-su.png', content: 'Lịch sử' },
     {
-        to: '/',
+        to: '/timhieu/lich-su',
+        src: 'https://mcdonalds.vn/uploads/userfiles/images/news_1536502569/lich-su.png',
+        content: 'Lịch sử',
+    },
+    {
+        to: '/gioi-thieu-mcdonalds',
         src: 'https://mcdonalds.vn/uploads/userfiles/images/news_1536502623/gioi-thieu.png',
         content: 'Giới thiệu',
     },
-    { to: '/', src: 'https://mcdonalds.vn/uploads/userfiles/images/news_1536502653/xuat-xu.png', content: 'Xuất xứ' },
     {
-        to: '/',
+        to: '/tim-hieu/xuat-xu',
+        src: 'https://mcdonalds.vn/uploads/userfiles/images/news_1536502653/xuat-xu.png',
+        content: 'Xuất xứ',
+    },
+    {
+        to: '/tim-hieu/nha-cung-cap',
         src: 'https://mcdonalds.vn/uploads/userfiles/images/news_1536502683/nha-cung-cap.png',
         content: 'Nhà cung cấp',
     },
-    { to: '/', src: 'https://mcdonalds.vn/uploads/userfiles/images/news_1536502733/dich-vu.png', content: 'Dịch vụ ' },
     {
-        to: '/',
+        to: '/tim-hieu/dich-vu',
+        src: 'https://mcdonalds.vn/uploads/userfiles/images/news_1536502733/dich-vu.png',
+        content: 'Dịch vụ ',
+    },
+    {
+        to: '/tim-hieu/an-toan-thanh-pham',
         src: 'https://mcdonalds.vn/uploads/userfiles/images/news_1536502792/an-toan-thuc-pham.png',
         content: 'An toàn thực phẩm',
     },

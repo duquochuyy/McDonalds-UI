@@ -1,5 +1,13 @@
+import { Fragment } from 'react';
+import { FeedbackLayout } from '~/components/Layouts';
+
 function Home() {
-    return <h2>Home page</h2>;
+    return (
+        <Fragment>
+            <h2>Home page</h2>
+            <FeedbackLayout />
+        </Fragment>
+    );
 }
 
 export default Home;

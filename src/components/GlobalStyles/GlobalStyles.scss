@@ -38,7 +38,7 @@ input,
 
 a[href] {
     text-decoration: none;
-    color: var(---white);
+    // color: var(---white);
 }
 
 .bg-primary {
@@ -63,4 +63,12 @@ a[href] {
 
 .bg-popper {
     background-color: rgba(25, 25, 25, 0.8);
+}
+
+.text-link-gray {
+    color: var(--text-color);
+}
+
+.border-primary {
+    border-color: var(--primary);
 }

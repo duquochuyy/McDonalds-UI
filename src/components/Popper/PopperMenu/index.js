@@ -55,7 +55,7 @@ function PopperMenu() {
                             <div className="text-base font-light mt-5">
                                 {item.content.map((subItem, subIndex) => {
                                     return (
-                                        <div key={`${index}_${subIndex}`} className="mb-0.5">
+                                        <div key={`${index}_${subIndex}`} className="mb-0.5 text-white">
                                             <Link className="" to={`${item.to}${subItem.to}`}>
                                                 {subItem.content}
                                             </Link>

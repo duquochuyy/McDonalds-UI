@@ -18,7 +18,7 @@ const navbarItems = [
 
 function NavItem({ to, content, onMouseEnter = false, onMouseLeave = false, showPopper = false, children }) {
     const props = {
-        className: 'navbar-item h-full font-light flex items-center',
+        className: 'navbar-item h-full font-light flex items-center text-white',
         to: to,
     };
     if (onMouseEnter) props.onMouseEnter = onMouseEnter;
@@ -51,13 +51,13 @@ function Header() {
     };
 
     return (
-        <header className="h-120 bg-header flex justify-center">
-            <div className="w-1170 h-30 flex">
+        <header className="w-full h-120 bg-header flex justify-center">
+            <div className="flex w-1170">
                 <div className="ml-5 mr-10">
                     <img src={images.logo} alt="Logo Mc Donald" />
                 </div>
 
-                <div className="navbar h-full flex">
+                <div className="navbar h-full flex row-auto">
                     {navbarItems.map((item, index) => {
                         if (item.id !== 'timhieu' && item.id !== 'thucdon')
                             return <NavItem key={index} to={item.to} content={item.content} />;
