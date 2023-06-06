@@ -19,14 +19,14 @@ const navbarItems = [
 function NavItem({ to, content, onMouseEnter = false, onMouseLeave = false, showPopper = false, children }) {
     const props = {
         className: 'navbar-item h-full font-light flex items-center text-white',
-        to: to,
+        // to: to,
     };
     if (onMouseEnter) props.onMouseEnter = onMouseEnter;
     if (onMouseLeave) props.onMouseLeave = onMouseLeave;
 
     return (
         <div {...props}>
-            <Link to="/" className="navbar-link text-lg">
+            <Link to={to} className="navbar-link text-lg">
                 {content}
             </Link>
             {children}
@@ -54,7 +54,9 @@ function Header() {
         <header className="w-full h-120 bg-header flex justify-center">
             <div className="flex w-1170">
                 <div className="ml-5 mr-10">
-                    <img src={images.logo} alt="Logo Mc Donald" />
+                    <Link to="/">
+                        <img src={images.logo} alt="Logo Mc Donald" />
+                    </Link>
                 </div>
 
                 <div className="navbar h-full flex row-auto">
@@ -93,22 +95,26 @@ function Header() {
                 </div>
 
                 <div className="flex items-center ml-auto">
-                    <button className="btn bg-primary rounded-full relative">
-                        <img src={images.location} alt="location" className="absolute text-4xl left-1.5 top-1.5" />
-                        <p className="absolute text-left top-1/2 -translate-y-2/4 left-14 text-xs text-white">
-                            Hệ thống
-                            <br />
-                            <span className="text-yellow-500 text-base">Cửa hàng</span>
-                        </p>
-                    </button>
-                    <button className="btn bg-primary rounded-full relative ml-3">
-                        <img src={images.location} alt="location" className="absolute text-4xl left-1.5 top-1.5" />
-                        <p className="absolute text-left top-1/2 -translate-y-2/4 left-14 text-xs text-white">
-                            Giao hàng
-                            <br />
-                            <span className="text-yellow-500 text-base">MCDelivery</span>
-                        </p>
-                    </button>
+                    <Link to="/cua-hang">
+                        <button className="btn bg-primary rounded-full relative">
+                            <img src={images.location} alt="location" className="absolute text-4xl left-1.5 top-1.5" />
+                            <p className="absolute text-left top-1/2 -translate-y-2/4 left-14 text-xs text-white">
+                                Hệ thống
+                                <br />
+                                <span className="text-yellow-500 text-base">Cửa hàng</span>
+                            </p>
+                        </button>
+                    </Link>
+                    <a href="/to-be-continue">
+                        <button className="btn bg-primary rounded-full relative ml-3">
+                            <img src={images.location} alt="location" className="absolute text-4xl left-1.5 top-1.5" />
+                            <p className="absolute text-left top-1/2 -translate-y-2/4 left-14 text-xs text-white">
+                                Giao hàng
+                                <br />
+                                <span className="text-yellow-500 text-base">MCDelivery</span>
+                            </p>
+                        </button>
+                    </a>
                 </div>
             </div>
         </header>
